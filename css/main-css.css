@@ -1,0 +1,26 @@
+.contenedor{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 300px auto;
+    
+
+    border: 10px solid red;
+    width: 90%;
+    margin: auto;
+    text-align: center;
+    grid-gap: 10px ;
+    background-color: lightblue;
+    height: 500px;
+
+    box-sizing: border-box;
+
+
+}
+
+.contenedor .contenedor-item{
+    display: block;
+
+   background-color: gray;
+   color: white;
+   /* border: 10px solid salmon; */
+}
