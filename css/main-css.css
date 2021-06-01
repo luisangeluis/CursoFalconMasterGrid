@@ -1,6 +1,7 @@
 .contenedor{
     display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
+    /* grid-template-columns: 1fr 2fr 1fr; */
+    grid-template-columns: 1fr repeat(2,2fr);
     grid-template-rows: 300px auto;
     
 
@@ -8,6 +9,7 @@
     width: 90%;
     margin: auto;
     text-align: center;
+    
     grid-gap: 10px ;
     background-color: lightblue;
     height: 500px;
@@ -16,11 +18,32 @@
 
 
 }
-
 .contenedor .contenedor-item{
     display: block;
-
    background-color: gray;
+   color: white;
+
+}
+
+/*Contenedor con min-max*/
+.contenedor_min-max{
+    display:grid;
+    grid-template-columns: minmax(200px,1fr) repeat(2,1fr);
+    grid-template-rows: minmax(20px,auto) 200px;
+
+
+    border: 10px solid red;
+    margin: auto;
+
+    text-align: center;
+    grid-gap: 10px;
+    background-color: whitesmoke;
+}
+
+.contenedor_min-max .contenedor-item{
+    display: block;
+
+   background-color: black;
    color: white;
    /* border: 10px solid salmon; */
 }
