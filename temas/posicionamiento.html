@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Posicionamiento</title>
+
+    <style>
+        .contenedor {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(4, 1fr);
+
+            border: 10px solid black;
+            grid-gap: 10px;
+            text-align: center;
+        }
+
+        .contenedor div {
+            background-color: lightblue;
+            padding: 10px
+        }
+
+        .contenedor .item {
+
+            /*Inicio y fin del item*/
+            /* grid-column-start: 1;
+            grid-column-end: 2;
+            grid-row-start: 1;
+            grid-row-end: -1; */
+
+            /*inicio y fin del item de forma abreviada*/
+            grid-column: 1/2;
+            grid-row: 1/-1;
+
+            /*inicio y fin del item de forma "MAS" abreviada*/
+            /* grid-area: 1/1/-1/2;*/
+
+            /*Con span*/
+            /* grid-column: span 1;
+            grid-row: span 4; */
+
+            background-color: blue; 
+        }
+    </style>
+</head>
+
+<body>
+    <div class="contenedor">
+        <div class="item">1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+        <div>11</div>
+        <div>12</div>
+    </div>
+</body>
+
+</html>
