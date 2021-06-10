@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Areas</title>
+
+    <style>
+        .contenedor {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-areas: "header     header    header"
+                                "side-bar1  contenido side-bar2"
+                                "side-bar1  widgets   side-bar2"
+                                "footer     footer    footer";
+
+
+
+            background-color: white;
+            gap: 10px;
+            text-align: center;
+
+        }
+
+        .contenedor div {
+            background-color: lightblue;
+        }
+
+        .contenedor .encabezado {
+            grid-column-start: header;
+            grid-column-end: header;
+            background-color: orange;
+            ;
+        }
+
+        .contenedor .side-bar1 {
+            /*forma 1*/
+            /* grid-column-start: side-bar1;
+            grid-column-end: side-bar1;
+            grid-row-start: side-bar1;
+            grid-row-end: side-bar1; */
+
+            /*forma 2*/
+            /* grid-column: side-bar1;
+            grid-row: side-bar1; */
+
+            /*forma 3*/
+            grid-area: side-bar1;
+            background-color: lightcoral;
+
+        }
+
+        .contenedor .contenido {
+
+            grid-area: contenido;
+
+            background-color: white;
+            color: red;
+        }
+
+        .contenedor .widget {
+
+            grid-area: widgets;
+            background-color: blue;
+
+        }
+
+        .contenedor .side-bar2 {
+
+            grid-area: side-bar2;
+            background-color: brown;
+
+        }
+
+        .contenedor .footer {
+
+            grid-area: footer;
+            background-color: sandybrown;
+
+        }
+
+        @media(max-width: 800px){
+            .contenedor{
+                grid-template-areas: "header     header    header"
+                                    "side-bar1  contenido contenido"
+                                    "side-bar1  widgets   widgets"
+                                    "side-bar2 side-bar2 side-bar2"
+                                    "footer     footer    footer";            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="contenedor">
+        <div class="encabezado">1</div>
+        <div class="side-bar1">2</div>
+        <div class="contenido">3</div>
+        <div class="widget">4</div>
+        <div class="side-bar2">5</div>
+        <div class="footer">6</div>
+        
+    </div>
+</body>
+
+</html>
