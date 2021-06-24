@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Implicita</title>
+    
+    <style>
+        .contenedor{
+            display: grid;
+            grid-template-columns: 200px 1fr 200px;
+            grid-template-rows: 200px 50px 200px;
+
+            /*rellena los espacios vacios que deja grid-column: span2 */
+            grid-auto-flow: dense;
+
+
+            /*grid-auto-rows es para elementos restantes en un grid implicito*/
+            grid-auto-rows: 1fr;
+
+            width: 80%;
+            gap: 10px;
+            height: 700px;
+            
+            text-align: center;
+            background-color:lightgray;
+            margin: 10px 0;
+        }
+        .contenedor .item{
+            background-color: lightcoral;
+        }
+        .contenedor .span2{
+            background-color: orange;
+            grid-column: span 2;
+        }
+        .contenedor .span3{
+            background-color: #575757;
+            grid-column: span 3;
+        }
+
+        .contenedor2{
+            display: grid;
+            grid-template-columns: 200px 1fr 200px;
+            grid-template-rows: 200px 30px 200px;
+
+            grid-auto-flow: column;
+            /*grid-auto-colums es para elementos restantes en un grid implicito*/
+            grid-auto-columns: 1fr;
+
+            width: 80%;
+            gap: 10px;
+            height: 700px;
+            
+            text-align: center;
+            background-color:lightgray;
+            margin: 10px 0;
+        }
+        
+        .contenedor2 .item2{
+            background-color: skyblue;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <div class="contenedor">
+        <div class="item">1</div>
+        <div class="item span2">2</div>
+        <div class="item ">3</div>
+        <div class="item span3">4</div>
+        <div class="item span2">5</div>
+        <div class="item span3">6</div>
+        <div class="item">7</div>
+        <div class="item">8</div>
+        <div class="item">9</div>
+        <div class="item">10</div>
+        <div class="item">11</div>
+        <div class="item">12</div>
+        <div class="item">13</div>
+        <div class="item span2">14</div>
+        <div class="item ">15</div>
+
+    </div>
+    <br>
+    
+    <div class="contenedor2">
+        <div class="item2">1</div>
+        <div class="item2 span2">2</div>
+        <div class="item2">3</div>
+        <div class="item2 span3">4</div>
+        <div class="item2 span2">5</div>
+        <div class="item2 span3">6</div>
+        <div class="item2">7</div>
+        <div class="item2">8</div>
+        <div class="item2">9</div>
+        <div class="item2">10</div>
+        <div class="item2">11</div>
+        <div class="item2">12</div>
+        <div class="item2">13</div>
+        <div class="item2">14</div>
+        <div class="item2 span2">15</div>
+        <div class="item2">15</div>
+
+    </div>
+</body>
+</html>
