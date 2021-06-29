@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>auto-fill y auto-fit</title>
+
+    <style>
+        .contenedor{
+            display: grid;
+            /*Con auto-fill y minmax se llena en automatico todos los elementos que quepan y si sobra espacio se conserva*/
+            /* grid-template-columns: repeat(auto-fill,minmax(100px,1fr)); */
+
+            /*lo mismo que auto-fill pero distribuye el espacio restante entre todos los elementos*/
+            grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+
+            gap: 10px;
+            background-color: aliceblue;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+            width: 80%;
+        }
+        .contenedor_item{
+            background-color: lightskyblue;
+        }
+    </style>
+</head>
+<body>
+    <div class="contenedor">
+        <div class="contenedor_item">1</div>
+        <div class="contenedor_item">2</div>
+        <div class="contenedor_item">3</div>
+        <div class="contenedor_item">4</div>
+        <div class="contenedor_item">5</div>
+
+        <div class="contenedor_item">6</div>
+
+    </div>
+</body>
+</html>
