@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subgrid</title>
+
+    <!--font awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        .contenedor{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            grid-template-rows: repeat(1, auto 1fr auto);
+            gap:10px
+        }
+        .card{
+            background-color: lightcyan;
+            grid-row: span 3;
+            grid-template-rows: subgrid;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="contenedor">
+        <div class="card">
+            <h2>Lorem ipsum dolor sit amet.</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, quo? Aliquid doloribus consectetur eveniet adipisci?</p> 
+                <i class="far fa-heart">10000000</i>
+            <i class="far fa-heart">500</i>
+            <i class="far fa-heart">200</i>
+            
+        </div>
+        <div class="card">
+            <h2>Lorem ipsum dolor sit amet consectetur.</h2>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda necessitatibus culpa, veritatis officiis perspiciatis earum autem architecto consequatur, mollitia dignissimos, quis quos distinctio voluptatem quidem quibusdam? Similique id accusantium quo, quidem repudiandae laudantium nam magnam, ipsum amet ipsa reiciendis a voluptates eaque architecto. Autem tenetur, recusandae quam dolorem nihil rerum?</p>
+            
+            <i class="far fa-heart">300</i>
+            <i class="far fa-heart">1500</i>
+            <i class="far fa-heart">25000</i>
+        </div>
+        <div class="card">
+            <h2>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt sed architecto blanditiis! Modi saepe ipsum quod sunt consequatur voluptatibus veritatis.</h2>
+            <p>Lorem ipsum dolor sit amet.</p>            
+            <i class="far fa-heart">2000</i>
+            <i class="far fa-heart">2800</i>
+            <i class="far fa-heart">2</i>
+        </div>
+        <div class="card">
+            <h2>Lorem ipsum dolor sit amet.</h2>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda necessitatibus culpa, veritatis officiis perspiciatis earum autem architecto consequatur, mollitia dignissimos, quis quos distinctio voluptatem quidem quibusdam? Similique id accusantium quo, quidem repudiandae laudantium nam magnam, ipsum amet ipsa reiciendis a voluptates eaque architecto. Autem tenetur, recusandae quam dolorem nihil rerum?</p>
+            
+            <i class="far fa-heart">10</i>
+            <i class="far fa-heart">100</i>
+            <i class="far fa-heart">10</i>
+        </div>
+    </div>
+</body>
+</html>
