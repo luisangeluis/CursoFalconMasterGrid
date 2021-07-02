@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina responsive</title>
+
+    <style>
+        .contenedor{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            grid-template-rows: repeat(3,1fr);
+
+            gap: 10px;
+
+            text-align: center;
+
+        }
+        .contenedor .header{
+            grid-column: 1/-1;
+            background-color: lightcoral;     
+        }
+        .contenedor .footer{
+            grid-column: 1/-1;
+            background-color: lightcoral;     
+        }
+        .contenedor .contenido{
+            grid-column: 1/-2;
+            background-color: lightcoral;     
+        }
+        .contenedor .sidebar{
+            grid-row: auto;
+             
+
+            background-color: lightcoral;     
+        }
+
+        .contenedor >div{
+            background-color: lightblue;
+            min-height: 100px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="contenedor">
+        <div class="header">1 header</div>
+        <div class="contenido">2 contenido</div>
+        <div class="widget1">3 sidebar</div>
+        <div class="widget2">4 widget1</div>
+        <div class="sidebar">5 widget</div>
+        <div class="footer">6 footer </div>
+    </div>
+
+</body>
+</html>
