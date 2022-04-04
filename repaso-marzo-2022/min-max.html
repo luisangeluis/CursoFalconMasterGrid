@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Primera grid</title>
+    <title>min-max function</title>
 
     <style>
         * {
@@ -37,22 +37,20 @@
         
         .contenedor {
             display: grid;
-            /*Indica cuantas columnas y las demas por defecto.*/
-            grid-template-columns: 200px 1fr 2fr;
-            /*Indica el tamaño de las filas.*/
-            grid-template-rows: 50px 20fr 1fr;
+            /*minmax estable un tamaño minimo y maximo de la columna no importa que no tenga contenido*/
+            grid-template-columns: minmax(200px, 1fr) 1fr 2fr;
+            /*Comenta el video que se usa mas en filas para que la caja se ajuste al contenido*/
+            grid-template-rows: minmax(10px, auto) 2fr repeat(2, 1fr);
             gap: 10px;
-            max-height: 500px;
         }
     </style>
 </head>
 
 <body>
-    <br>
     <div class="contenedor">
-        <div class="div">1</div>
-        <div class="div">2</div>
-        <div class="div">3</div>
+        <div class="div">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore deleniti voluptatibus nesciunt! Assumenda tempore labore earum suscipit repellat facilis possimus, sunt voluptatem, accusantium nemo magnam. Voluptatem voluptatum alias vitae consequatur?</div>
+        <div class="div"></div>
+        <div class="div"></div>
         <div class="div">4</div>
         <div class="div">5</div>
         <div class="div">6</div>
@@ -63,6 +61,7 @@
         <div class="div">11</div>
         <div class="div">12</div>
     </div>
+
 </body>
 
 </html>
