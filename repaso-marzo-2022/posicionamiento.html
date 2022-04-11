@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Posicionamiento</title>
+
+    <style>
+        * {
+            padding: 0;
+        }
+        
+        html {
+            height: 100%;
+        }
+        
+        body {
+            background-color: lightslategrey;
+            height: 100%;
+        }
+        
+        .contenedor {
+            width: 90%;
+            height: 100%;
+            background-color: gray;
+            text-align: center;
+            margin: auto;
+        }
+        
+        .contenedor .div {
+            padding: 10px;
+            border: 1px solid white;
+            background-color: lightblue;
+            /*Display flex*/
+            /*para que lo que hay en cada caja quede totalmente centrado*/
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        /*GRID*/
+        
+        .contenedor {
+            display: grid;
+            /*minmax estable un tamaño minimo y maximo de la columna no importa que no tenga contenido*/
+            grid-template-columns: 1.1fr repeat(3, 1fr);
+            /*Comenta el video que se usa mas en filas para que la caja se ajuste al contenido*/
+            grid-template-rows: repeat(4, 1fr);
+            gap: 10px;
+        }
+        
+        .div.contenedor_item {
+            background-color: orange;
+            /* grid-column-start: 1;
+            /*Con numeros negativos empiezas a contar de derecha a izquierda*/
+            /* grid-column-end: 1; */
+            /*Tambien indicarle en que columnas aparacer
+            grid-row-start: 1;
+            grid-row-end: -1; */
+            /********/
+            /*ATAJOS*/
+            /********/
+            /*Es para darle tamaño  de ancho y alto a un item en especifico de manera individual*/
+            grid-column: 1/2;
+            grid-row: 1/-1;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="contenedor">
+        <!-- <div class="div">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore deleniti voluptatibus nesciunt! Assumenda tempore labore earum suscipit repellat facilis possimus, sunt voluptatem, accusantium nemo magnam. Voluptatem voluptatum alias vitae consequatur?</div> -->
+        <div class="div contenedor_item">1</div>
+        <div class="div">2</div>
+        <div class="div">3</div>
+        <div class="div">4</div>
+        <div class="div">5</div>
+        <div class="div">6</div>
+        <div class="div">7</div>
+        <div class="div">8</div>
+        <div class="div">9</div>
+        <div class="div">10</div>
+        <div class="div">11</div>
+        <div class="div">12</div>
+    </div>
+</body>
+
+</html>
