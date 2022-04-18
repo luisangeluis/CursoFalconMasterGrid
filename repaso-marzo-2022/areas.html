@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Areas</title>
+
+    <style>
+        * {
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            height: 100%;
+        }
+        
+        body {
+            background-color: lightslategrey;
+            height: 100%;
+        }
+        
+        .contenedor {
+            width: 90%;
+            height: 100%;
+            background-color: gray;
+            text-align: center;
+            margin: auto;
+        }
+        
+        .contenedor .div {
+            padding: 10px;
+            border: 1px solid white;
+            background-color: lightblue;
+        }
+        /*GRID*/
+        
+        .contenedor {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: .3fr repeat(2, 1fr) .5fr;
+            gap: 10px;
+            grid-template-areas: "header    header      header" 'sidebar-1  contenido   sidebar-2' 'sidebar-1  widgets     sidebar-2' 'footer     footer      footer';
+        }
+        
+        .div.header {
+            background-color: orange;
+            grid-area: header;
+        }
+        
+        .div.sidebar-1 {
+            background-color: lightskyblue;
+            /*Forma 1*/
+            /* grid-column: sidebar-1;
+            grid-row: sidebar-1;*/
+            /*Otra forma*/
+            grid-area: sidebar-1;
+        }
+        
+        .div.contenido {
+            background-color: lightcoral;
+            grid-area: contenido;
+        }
+        
+        .div.widgets {
+            background-color: goldenrod;
+            grid-area: widgets;
+        }
+        
+        .div.sidebar-2 {
+            background-color: firebrick;
+            grid-area: sidebar-2;
+        }
+        
+        .div.footer {
+            background-color: royalblue;
+            grid-area: footer;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="contenedor">
+        <!-- <div class="div">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore deleniti voluptatibus nesciunt! Assumenda tempore labore earum suscipit repellat facilis possimus, sunt voluptatem, accusantium nemo magnam. Voluptatem voluptatum alias vitae consequatur?</div> -->
+        <div class="div header">header</div>
+        <div class="div sidebar-1">side bar 1</div>
+        <div class="div contenido">contenido</div>
+        <div class="div widgets">widgets</div>
+        <div class="div sidebar-2">sidebar-2</div>
+        <div class="div footer">footer</div>
+
+
+    </div>
+</body>
+
+</html>
