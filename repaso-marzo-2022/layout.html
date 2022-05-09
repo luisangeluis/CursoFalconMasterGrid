@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Areas</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            background-color: lightcyan;
+        }
+
+        .contenedor{
+            width: 90%;
+            margin: 20px auto;
+
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 10px;
+        }
+
+        .contenedor >div,
+        .contenedor .header,
+        .contenedor .contenido,
+        .contenedor .sidebar,
+        .contenedor .footer
+        {
+            background-color: #fff;
+            padding: 1rem;
+        }
+
+        .contenedor .header{
+            background-color: #12203E;
+            border-radius: 10px;
+            grid-column: 1/-1;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .contenedor .contenido{
+            grid-column: span 2;
+        }
+
+        .contenedor .sidebar{
+            grid-column: 3/4;
+            grid-row: span 2;
+            background-color: #faa43d;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .contenedor .widget-1,
+        .contenedor .widget-2{
+            display: flex;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100px;
+        }
+
+        .contenedor .footer{
+            background-color: #12203e;
+            grid-column: 1/-1;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="contenedor">
+
+        <header class="header">
+            <h2>Header</h2>
+        </header>
+
+        <main class="contenido">
+            <h1>contenido</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus enim cupiditate praesentium quas. Nesciunt
+                architecto vitae iure nemo laborum odit consequuntur saepe beatae, adipisci quia, aut laudantium! Illum,
+                in officia?
+                Beatae quisquam nemo vero possimus mollitia! Veniam deleniti expedita quisquam eius magni accusantium
+                totam rem culpa nulla. Non ad expedita libero exercitationem, illum nihil eos consequuntur aut veritatis
+                voluptates nulla?
+                Atque impedit deleniti repudiandae provident neque harum? Laboriosam labore obcaecati itaque,
+                consectetur commodi vel culpa ut pariatur perferendis eum omnis dolorum laudantium dolore distinctio!
+                Reiciendis rem necessitatibus laboriosam beatae libero!
+                <br>
+                <br>
+                Officia error ex, odit odio sunt fugit nulla reprehenderit quod. Odio beatae fugit ratione, cum expedita
+                sequi quas, officiis repudiandae officia incidunt quidem! Totam vero dolor ea quis magni dolorum?
+                Ducimus officia fugit blanditiis laudantium eveniet autem laboriosam ratione esse! Consequatur veniam
+                odit enim corporis possimus? Laudantium reiciendis blanditiis earum non placeat soluta totam similique
+                ab omnis debitis, aliquid iste?
+                Quos voluptatum at eum id ex quisquam! Aut officiis deleniti rem nobis doloribus iure saepe error. Sit
+                tenetur, beatae ipsum autem, alias, reprehenderit voluptatem recusandae voluptas rem odit ex
+                consectetur.
+                Deleniti eligendi ab architecto reprehenderit officiis fuga ipsa esse unde nam nulla accusantium natus
+                voluptatem voluptas beatae laudantium culpa adipisci, aperiam aliquid? Voluptatem fuga aliquid quae
+                dolore distinctio inventore deserunt!
+                <br>
+                <br>
+                Veritatis maiores sed ut recusandae velit, consequuntur, eveniet, aspernatur sit dolores dolorum
+                necessitatibus? Quibusdam, quos! Quisquam, deserunt ipsum soluta asperiores maiores quibusdam
+                necessitatibus nulla placeat eius corrupti vero, et maxime.
+                Natus, tempore architecto odio laborum illo dolore, fugit asperiores eius quas quisquam saepe
+                exercitationem dignissimos aspernatur? Accusantium labore voluptatum iure deserunt velit, sit modi
+                alias, itaque repellat accusamus, corporis odit!
+                Modi, tempore! Expedita amet ea architecto, illo aliquam reprehenderit repellat, ducimus rem, recusandae
+                placeat dolor exercitationem iste! Similique, libero. Eveniet dolore minus hic dicta tempore vel et
+                necessitatibus error odit?
+                <br>
+                <br>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. In, impedit facilis id dignissimos officiis
+                unde ratione eos sequi sunt, deserunt vitae corporis accusamus tempore fugit. Qui voluptatum quo at
+                commodi!
+                Distinctio dignissimos et minima. Temporibus et eos quidem laudantium fuga laborum ipsa odit. Eveniet
+                repellat consequatur deserunt placeat aut pariatur quibusdam impedit nesciunt animi. Impedit maiores
+                consequatur harum nostrum velit.
+                Incidunt consequuntur sapiente ipsum labore quaerat quod ad, ullam, neque cupiditate repellat debitis
+                alias voluptate. Modi repellendus sequi molestiae. Dolor facilis rerum eos. Eum voluptates nihil ab
+                repellat aperiam tempora?
+                Cumque at commodi aliquam eius, eos tempora maiores ab ea adipisci voluptates, id quasi ipsa quo autem
+                minima! Eaque quae quas sapiente veritatis fugit quia nulla, culpa voluptatem sed hic.
+                Repudiandae rem cum excepturi, dolorem unde quod incidunt laborum distinctio beatae cumque qui culpa
+                quaerat enim, consectetur aspernatur quam eos eveniet ipsum earum ipsa atque recusandae obcaecati. Unde,
+                aliquid hic.
+                Officia voluptates modi corrupti, pariatur, ipsum totam est laudantium minus esse consectetur quod earum
+                facere autem eos quidem nisi quos cumque non, fugiat harum exercitationem rem nobis. Error, neque
+                inventore?
+                <br>
+                <br>
+                Animi minima laudantium quo mollitia dolore? Debitis, necessitatibus. Iste aliquam magnam tempora.
+                Accusantium esse autem, explicabo cumque est dolores quibusdam, aspernatur maiores incidunt repudiandae
+                quasi, enim cum hic porro eum?
+                Porro obcaecati unde eaque possimus tenetur perspiciatis corrupti sapiente error placeat omnis officia
+                delectus illo, architecto provident commodi! Recusandae vitae dolores eos impedit sequi fugit quisquam
+                ipsum quo vel dignissimos.
+                Quos dolore odio commodi perferendis non vitae, laudantium, magni praesentium eos adipisci minus labore
+                quasi molestiae. Sint corporis omnis iure a ipsa suscipit quia, vitae saepe animi fuga rerum nobis!
+                Distinctio necessitatibus maxime quod atque est? Odit sapiente deserunt dignissimos? Ullam totam ea
+                amet. Laborum dolor adipisci possimus excepturi, commodi ducimus rem? Eligendi modi tenetur, ex
+                inventore fugiat ab voluptatibus.
+            </p>
+        </main>
+
+        <aside class="sidebar">
+            <h3>SIDEBAR</h3>
+        </aside>
+
+        <div class="widget-1">
+            <h3>Widget 1</h3>
+        </div>
+
+        <div class="widget-2">
+            <h3>Widget 2</h3>
+
+        </div>
+
+        <footer class="footer">
+            <h3>Footer</h3>
+        </footer>
+
+    </div>
+</body>
+
+</html>
