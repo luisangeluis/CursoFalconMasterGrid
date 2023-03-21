@@ -1,0 +1,23 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: lightslategray;
+    color:#f0f0f0;
+    font-family: 'Roboto',sans-serif;
+}
+.grid-container{
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+    border: solid black 6px;
+
+}
+.grid-item{
+    display: block;
+    padding: 20px;
+    background-color: lightseagreen;
+    /* box-shadow: 2px 2px 2px white; */
+}
