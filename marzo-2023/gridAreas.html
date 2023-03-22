@@ -10,18 +10,26 @@
   <style>
     .grid-container {
       display: grid;
-      grid-template-columns: minmax(300px, 1fr) 1fr;
-      grid-template-rows: minmax(100px, auto) 300px;
+      /* grid-template-columns: repeat(3,1fr); */
+      grid-template-areas: "header header header";
+      grid-template-rows: repeat(4,auto);
       gap: 20px;
     }
+    .header{
+        background-color: black;
+    }
+
+    
   </style>
 </head>
 
 <body>
   <section class="grid-container">
-    <div class="grid-item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium non vitae modi nisi
+    <!-- <div class="grid-item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium non vitae modi nisi
       recusandae perspiciatis accusamus eius omnis aperiam eum reprehenderit nemo voluptatum, vel pariatur? Accusantium
       quidem ipsa velit delectus temporibus. Corporis, explicabo atque eveniet hic ut deleniti aperiam? Ducimus!</div>
+     -->
+    <div class="grid-item header">1</div>
     <div class="grid-item">2</div>
     <div class="grid-item">3</div>
     <div class="grid-item">4</div>
@@ -33,7 +41,7 @@
     <div class="grid-item">10</div>
     <div class="grid-item">11</div>
     <div class="grid-item">12</div>
-    <div class="grid-item">13</div>
   </section>
 </body>
+
 </html>

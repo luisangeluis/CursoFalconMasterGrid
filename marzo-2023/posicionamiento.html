@@ -10,18 +10,39 @@
   <style>
     .grid-container {
       display: grid;
-      grid-template-columns: minmax(300px, 1fr) 1fr;
-      grid-template-rows: minmax(100px, auto) 300px;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(4, 1fr);
       gap: 20px;
+    }
+
+    .item{
+      background-color: orange;
+      /* Para posicionar los hijos */
+      /* grid-column-start: 1;
+      grid-column-end: 2;
+      grid-row-start: 1;
+      grid-row-end: -1; */
+      
+      /* ATAJO */
+      /* grid-column: 1/2;
+      grid-row: 1/-1; */
+
+
+      /*Otra forma de posicionar a los hijos*/
+      /* SPAN */
+      grid-column: 2/span 2;
+      grid-row: 2/span 2;
     }
   </style>
 </head>
 
 <body>
   <section class="grid-container">
-    <div class="grid-item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium non vitae modi nisi
+    <!-- <div class="grid-item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium non vitae modi nisi
       recusandae perspiciatis accusamus eius omnis aperiam eum reprehenderit nemo voluptatum, vel pariatur? Accusantium
       quidem ipsa velit delectus temporibus. Corporis, explicabo atque eveniet hic ut deleniti aperiam? Ducimus!</div>
+     -->
+    <div class="grid-item item">1</div>
     <div class="grid-item">2</div>
     <div class="grid-item">3</div>
     <div class="grid-item">4</div>
@@ -33,7 +54,7 @@
     <div class="grid-item">10</div>
     <div class="grid-item">11</div>
     <div class="grid-item">12</div>
-    <div class="grid-item">13</div>
   </section>
 </body>
+
 </html>
