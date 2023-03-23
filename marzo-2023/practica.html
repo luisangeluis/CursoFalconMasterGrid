@@ -16,33 +16,49 @@
       background-color: lightgray;
       color: #000;
     }
-    .contenedor{
+
+    .contenedor {
       width: 90%;
       max-width: 1200px;
       min-height: 100vh;
       margin: 0 auto;
       display: grid;
       gap: 1rem;
-      grid-template-columns: repeat(3,1fr);
-      /* grid-template-rows: 7rem repeat(2,auto) 7rem; */
-      grid-template-rows: repeat(4,1fr);
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: 5rem repeat(2, auto) 5rem;
+      /* grid-template-rows: repeat(4,1fr); */
 
     }
-    .contenedor > *{
-      background-color: #fff;
+
+    .contenedor>* {
+      background-color: #434040;
       padding: 1rem;
       border-radius: 5px;
     }
-    .header{
+
+    .header {
       display: flex;
       justify-content: center;
       align-items: center;
+      min-height: auto;
       background-color: #000;
       color: whitesmoke;
       grid-column: 1/-1;
       /* grid */
+      transition: all ease-in-out 1.5s;
+      z-index: 1;
+
+
     }
-    .contenido{
+
+    .height {
+      min-height: 400px;
+      background-color: red;
+      /* transition: all ease-in-out 10s; */
+
+    }
+
+    .contenido {
       display: flex;
       flex-direction: column;
       justify-content: space-evenly;
@@ -50,7 +66,8 @@
       background-color: orange;
       grid-column: span 2;
     }
-    .sidebar{
+
+    .sidebar {
       display: flex;
       justify-content: center;
       align-items: center;
@@ -59,13 +76,16 @@
       grid-column: span 1;
       grid-row: span 2;
     }
-    .widget-1,.widget-2{
+
+    .widget-1,
+    .widget-2 {
       display: flex;
       justify-content: center;
       align-items: center;
-      min-height: 3rem;
+      /* min-height: 3rem; */
     }
-    .footer{
+
+    .footer {
       display: flex;
       justify-content: center;
       align-items: center;
@@ -73,20 +93,96 @@
       background-color: brown;
       text-align: center;
     }
+
+    .nav {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: nowrap;
+    }
   </style>
 </head>
 
 <body>
-  <section class="contenedor">
+  <div class="contenedor">
+
     <header class="header">
-      <h2>Header</h2>
+      <h2 class="title">Header</h2>
+
+      <nav class="">
+        <ul class="nav">
+          <li>item</li>
+          <li>item</li>
+          <li>item</li>
+          <li>item</li>
+          <li>item</li>
+        </ul>
+      </nav>
     </header>
     <main class="contenido">
-      <h1>Contenido</h1>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit maxime accusamus nam iusto labore sequi
-        beatae similique vel expedita laboriosam.</p>
-      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus debitis doloremque voluptatibus
-        voluptatem maxime excepturi numquam animi exercitationem natus porro!</p>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Necessitatibus unde natus quod tempora dolores ut
+        perspiciatis repellendus distinctio doloribus. Placeat velit ea beatae voluptas voluptate natus odio distinctio
+        quo voluptatum!</p>
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae voluptatem dignissimos quia impedit saepe
+        voluptates! Dolore ipsum reprehenderit in. Dicta, excepturi cumque omnis blanditiis ad minus delectus deleniti
+        doloribus adipisci!
+        Impedit deleniti quod in doloremque porro? Voluptate quibusdam dolore aspernatur esse explicabo optio illo,
+        magni sapiente laborum ad aperiam doloremque numquam ex repudiandae autem ea cupiditate. Quas provident natus
+        voluptas?
+        Repellat quisquam deleniti commodi dolorum omnis corporis atque possimus eligendi! Voluptatum vel fugiat debitis
+        veritatis modi officiis dolorem commodi. Fuga, incidunt explicabo aut nobis reiciendis dolore illo quis
+        molestiae recusandae.
+        Ullam eligendi facilis voluptatum maiores voluptates praesentium quae dolore nisi quis ut. Asperiores
+        perferendis possimus atque repudiandae cumque eaque! Possimus explicabo odit eveniet enim temporibus nobis,
+        accusantium velit quia tenetur!
+        Fuga, rem obcaecati nam hic totam possimus sed autem ex enim ut dicta minima, sapiente et. Illum dolores
+        laudantium doloremque, quisquam, velit praesentium laborum cupiditate, soluta sint consequatur harum
+        perferendis!
+        Praesentium pariatur quisquam ipsum voluptatibus fuga dignissimos officia quo possimus molestiae autem! Ipsa
+        expedita tempore nobis, distinctio atque commodi officiis explicabo nam! Quisquam reprehenderit accusantium
+        nobis expedita omnis et ducimus!
+        Excepturi ea temporibus, consequatur tempore voluptate in illo reprehenderit, architecto id aliquid quo,
+        explicabo illum perferendis voluptatem. Eveniet praesentium voluptate dignissimos consequuntur in, ea officiis
+        nam amet doloribus vero esse?
+        Excepturi magni aspernatur fugiat porro, eum sit molestiae totam deleniti dolorum ad eius officiis magnam
+        ducimus blanditiis ipsa quas in adipisci nesciunt sunt dolores nobis eos suscipit labore? Animi, repudiandae?
+        Cumque ipsa nisi expedita amet. Quae nulla rerum laudantium optio ipsa? Velit similique provident molestiae
+        maxime cupiditate nostrum id eligendi officiis, beatae totam saepe exercitationem sapiente a aliquid non
+        dolores.
+        Tenetur, voluptas odio! Suscipit, unde reiciendis itaque aliquid accusamus dolor quia, placeat corporis neque
+        blanditiis culpa? Cum dolores numquam necessitatibus maiores! Praesentium, consectetur cumque! Optio pariatur
+        dolor ea illo totam.
+        Nisi velit alias ducimus quibusdam consequatur, cumque asperiores repudiandae recusandae necessitatibus
+        accusamus rerum quos maxime laudantium iste, mollitia debitis, magni cupiditate corporis laboriosam tempore
+        tempora! Nesciunt eos commodi laboriosam cupiditate?
+        Nobis perferendis recusandae nulla, facilis neque eum amet obcaecati? Veniam maxime quis cupiditate? Quas velit
+        in unde neque, porro explicabo voluptatem illo error magni dignissimos sit atque molestias quos quidem.
+        Id rerum debitis blanditiis ratione accusantium perspiciatis pariatur, facere earum at, laudantium cupiditate
+        dicta. Labore provident quod architecto et a, sed quam voluptatum itaque ut voluptas similique placeat
+        reprehenderit animi.
+        Eius facere eligendi placeat vel facilis officiis voluptatem molestias aperiam odio, itaque praesentium dolorem
+        exercitationem ipsam nemo magni voluptates repellat. Provident eligendi nemo libero facilis magnam error dicta
+        unde qui.
+        Accusamus reiciendis molestiae explicabo inventore vero quia nostrum? Architecto rerum dolorem sed aperiam
+        officiis repudiandae incidunt voluptatibus quam tempora. Natus voluptates ratione ipsam culpa reprehenderit
+        deleniti iusto. Corrupti, assumenda repellat?
+        Repudiandae totam, veritatis natus eum nesciunt ut praesentium nobis aliquam officiis ad, numquam in voluptas
+        temporibus eveniet repellendus quidem rerum voluptatibus quam quia odio recusandae. Velit excepturi quod dolorem
+        facere!
+        Fuga quisquam adipisci fugit aliquam nobis, in blanditiis aut! Nostrum sunt, officia dolor eaque recusandae illo
+        ab dignissimos nulla eos fugit, minus nesciunt corporis animi nihil hic a harum veritatis.
+        Ducimus possimus quaerat necessitatibus odio blanditiis beatae aspernatur nam porro vel dolorum nesciunt
+        veritatis, maxime fuga aliquid id est ipsa eius fugiat adipisci, sunt nisi reiciendis saepe ullam harum!
+        Accusantium.
+        Dolor autem aut eos? Modi repellat soluta possimus sunt ratione rem sed vero tenetur autem, laborum cum quasi
+        pariatur labore expedita tempora dolores corrupti reprehenderit iste facilis temporibus minus veniam?
+        Inventore aliquam, possimus voluptatum quo earum architecto, assumenda quaerat modi quod id, qui dignissimos!
+        Quidem sint facilis ut velit, optio alias voluptates doloremque voluptatibus ex ipsa officia accusantium nihil
+        amet?
+      </p>
+      <p></p>
+      <p></p>
     </main>
     <aside class="sidebar">
       <h3>Aside</h3>
@@ -100,9 +196,13 @@
     <footer class="footer">
       <h3>Footer</h3>
     </footer>
-
-
-  </section>
+  </div>
+  <script>
+    const btn = document.querySelector('.btn');
+    const header = document.querySelector('.header');
+    const title = document.querySelector('.title');
+    btn.addEventListener('click', () => title.classList.toggle('height'))
+  </script>
 </body>
 
 </html>
