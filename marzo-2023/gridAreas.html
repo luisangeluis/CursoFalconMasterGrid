@@ -8,39 +8,69 @@
   <title>Document</title>
   <link rel="stylesheet" href="./global.css">
   <style>
+    *{
+      margin: 0;
+      box-sizing: border-box;
+    }
     .grid-container {
       display: grid;
-      /* grid-template-columns: repeat(3,1fr); */
-      grid-template-areas: "header header header";
-      grid-template-rows: repeat(4,auto);
-      gap: 20px;
-    }
-    .header{
-        background-color: black;
+      max-width: 100%;
+      min-height: 100vh;
+      gap: 0;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: minmax(5rem,1fr) repeat(2,3fr) minmax(4rem,1fr) ;
+      grid-template-areas:
+        "header     header    header"
+        "sidebar-1  contenido sidebar-2"
+        "sidebar-1  widgets   sidebar-2"
+        "footer     footer    footer";
+      margin: 0 0;
+      width: 100%;
     }
 
-    
+    .header {
+      background-color: lightblue;
+      grid-column: header/header;
+    }
+    .sidebar-1{
+      background-color: lightcoral;
+
+      /* Una forma */
+      /* grid-column: sidebar-1;
+      grid-row: sidebar-1; */
+
+      /* Otra forma */
+      grid-area: sidebar-1;
+    }
+    .contenido{
+      background-color: royalblue;
+      grid-area: contenido;
+    }
+    .widgets{
+      background-color: rebeccapurple;
+      grid-area: widgets;
+    }
+    .sidebar-2{
+      background-color: red;
+      grid-area: sidebar-2;
+    }
+    .footer{
+      background-color: brown;
+      grid-area:footer;
+    }
   </style>
 </head>
 
 <body>
   <section class="grid-container">
-    <!-- <div class="grid-item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium non vitae modi nisi
-      recusandae perspiciatis accusamus eius omnis aperiam eum reprehenderit nemo voluptatum, vel pariatur? Accusantium
-      quidem ipsa velit delectus temporibus. Corporis, explicabo atque eveniet hic ut deleniti aperiam? Ducimus!</div>
-     -->
-    <div class="grid-item header">1</div>
-    <div class="grid-item">2</div>
-    <div class="grid-item">3</div>
-    <div class="grid-item">4</div>
-    <div class="grid-item">5</div>
-    <div class="grid-item">6</div>
-    <div class="grid-item">7</div>
-    <div class="grid-item">8</div>
-    <div class="grid-item">9</div>
-    <div class="grid-item">10</div>
-    <div class="grid-item">11</div>
-    <div class="grid-item">12</div>
+    <div class="grid-item header">Revisar 3</div>
+    <div class="grid-item sidebar-1">sidebar-1</div>
+    <div class="grid-item contenido">contenido</div>
+    <div class="grid-item widgets">widgets</div>
+    <div class="grid-item sidebar-2">sidebar-2</div>
+    <div class="grid-item footer">footer</div>
+    
+   
   </section>
 </body>
 

@@ -16,7 +16,7 @@ body{
 
 }
 .grid-item{
-    display: block;
+    /* display: block; */
     padding: 20px;
     background-color: lightseagreen;
     /* box-shadow: 2px 2px 2px white; */

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./global.css">
+  <style>
+    * {
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    .grid-container {
+      display: grid;
+      gap: 20px;
+      grid-template-columns: 200px 1fr 200px;
+      grid-template-rows: 200px 100px 200px;
+
+      /* grid auto rows acomoda los elementos que no entraron en la grid que 
+      se definio arriba */
+      grid-auto-rows: 50px;
+      /* grid auto columns solo funciona cambiando el flow del grid
+     con grid-auto-flow: ; */
+      /* grid-auto-columns:500px; */
+
+      /* dense sirve para que rellene los espacios que dejan las clases span2 y span3 */
+      grid-auto-flow: dense;
+    }
+
+    .span2 {
+      background-color: red;
+      grid-column: span 2;
+    }
+
+    .span3 {
+      background-color: brown;
+      grid-column: span 3;
+
+    }
+  </style>
+</head>
+
+<body>
+  <section class="grid-container">
+    <div class="grid-item">
+      <p>parrafo</p>
+      <p>parrafo</p>
+      <p>parrafo</p>
+    </div>
+    <div class="grid-item">2</div>
+    <div class="grid-item">3</div>
+    <div class="grid-item">4</div>
+    <div class="grid-item span2">5</div>
+    <div class="grid-item">6</div>
+    <div class="grid-item span3">7</div>
+    <div class="grid-item">8</div>
+    <div class="grid-item span2">9</div>
+    <div class="grid-item">10</div>
+    <div class="grid-item">11</div>
+    <div class="grid-item span3">12</div>
+    <div class="grid-item">13</div>
+    <div class="grid-item">14</div>
+    <div class="grid-item">15</div>
+  </section>
+</body>
+
+</html>
