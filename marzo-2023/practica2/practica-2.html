@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./practica2.css">
+</head>
+
+<body>
+  <div class="contenedor">
+    <header class="header">
+      <p>HEADER</p>
+    </header>
+    <main class="contenido">
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam inventore dolorem consectetur soluta
+        exercitationem voluptate, atque et facere impedit? Laborum.</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam inventore dolorem consectetur soluta
+        exercitationem voluptate, atque et facere impedit? Laborum.</p>
+    </main>
+    <aside class="aside">
+      <!-- <p>aside</p> -->
+      <button class="btn">Click</button>
+    </aside>
+    <div class="widget-1">
+      <p>widget-1</p>
+    </div>
+    <div class="widget-2">
+      <p>widget-2</p>
+    </div>
+    
+    <footer class="footer">
+      <p>footer</p>
+    </footer>
+  </div>
+  <script>
+    const btn =document.querySelector('.btn');
+    const aside =document.querySelector('.aside');
+    btn.addEventListener('click',()=>{
+      console.log('click');
+      aside.classList.toggle('open-aside');
+    })
+  </script>
+</body>
+
+</html>
